@@ -13,14 +13,14 @@ import numpy as np
 from pymongo import MongoClient
 
 # Conectar a MongoDB en localhost
-client = MongoClient("mongodb+srv://brysagix1234:admin1234@cluster0.o9ii7lx.mongodb.net/?appName=Cluster0")
+client = ***
 
 # Seleccionar base de datos
-db = client["uvProyectoOrquideas"]
+db = client["***"]
 
 # Seleccionar colección
-coleccion = db["nuevosClasificados"]
-coleccion2 = db["nuevasPredicciones"]
+coleccion = db["***"]
+coleccion2 = db["***"]
 
 app = FastAPI()
 
