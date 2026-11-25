@@ -3,24 +3,35 @@
 
 #python -m uvicorn main:app --reload
 
+
+
+import os
+
+MONGO_URI = os.getenv("MONGO_URI")
+DATABASE_NAME = os.getenv("DATABASE_NAME")
+COLECCION = os.getenv("COLECCION")
+COLECCION2 = os.getenv("COLECCION2")
+
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
 from typing import Optional
 import numpy as np
-
-
 from pymongo import MongoClient
 
-# Conectar a MongoDB en localhost
-client = ***
+
+
+# Conectar a MongoDB
+client = MongoClient(MONGO_URI)
 
 # Seleccionar base de datos
-db = client["***"]
+db = client[DATABASE_NAME]
 
-# Seleccionar colección
-coleccion = db["***"]
-coleccion2 = db["***"]
+# Seleccionar colecciones
+coleccion = db[COLECCION]
+coleccion2 = db[COLECCION2]
+
 
 app = FastAPI()
 
