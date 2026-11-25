@@ -13,7 +13,7 @@ import numpy as np
 from pymongo import MongoClient
 
 # Conectar a MongoDB en localhost
-client = ****
+client = ***
 
 # Seleccionar base de datos
 db = client["***"]
